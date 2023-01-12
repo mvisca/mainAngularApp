@@ -1,0 +1,27 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+import { HomeComponent } from './home/home.component';
+import { Lex1Component } from './lex1/lex1.component';
+import { Lex1313Component } from './lex1313/lex1313.component';
+import { Lex2Component } from './lex2/lex2.component';
+
+
+
+const routes: Routes = [
+    { path: '', component: HomeComponent },
+    { path: 'home', redirectTo: '' },
+    { path: 'lex1', component: Lex1Component },
+    { path: 'lex2', component: Lex2Component },
+    { path: 'lex1313', component: Lex1313Component },
+    { 
+        path: '', 
+        loadChildren: () => import('./grupo4al10/grupo4al10.module').then(m => m.Grupo4al10Module)
+    }
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class LeccionesRoutingModule { }
