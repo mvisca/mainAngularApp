@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { Grupo4al10RoutingModule } from './grupo4al10-routing.module';
 import { Lex4Component } from './lex4/lex4.component';
 import { Lex5Component } from './lex5/lex5.component';
 import { Lex6Component } from './lex6/lex6.component';
@@ -12,18 +11,27 @@ import { Lex10Component } from './lex10/lex10.component';
 
 
 @NgModule({
-  declarations: [
-    Lex4Component,
-    Lex5Component,
-    Lex6Component,
-    Lex7Component,
-    Lex8Component,
-    Lex9Component,
-    Lex10Component
-  ],
-  imports: [
-    CommonModule,
-    Grupo4al10RoutingModule
-  ]
+    declarations: [
+        Lex4Component,
+        Lex5Component,
+        Lex6Component,
+        Lex7Component,
+        Lex8Component,
+        Lex9Component,
+        Lex10Component
+    ],
+    imports: [
+        CommonModule,
+    ],
+    exports: [
+        Lex4Component,
+        Lex5Component,
+        Lex6Component,
+        Lex7Component,
+        Lex8Component,
+        Lex9Component,
+        Lex10Component
+    ]
+    
 })
 export class Grupo4al10Module { }

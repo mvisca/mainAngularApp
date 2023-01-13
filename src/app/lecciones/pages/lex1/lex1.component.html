@@ -1,0 +1,10 @@
+<div [innerHTML]="lex1String"></div>
+
+<div>
+  <button (click)="showLex4 = !showLex4" class="btn btn-outline-primary">{{ lex4ButtonText() }} </button>
+  <ng-container *ngIf="showLex4; else lex4Template"></ng-container>
+</div>
+
+<ng-template #lex4Template>
+  <app-lex4></app-lex4>
+</ng-template>
