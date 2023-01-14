@@ -6,7 +6,7 @@ import { Lex1Component } from './pages/lex1/lex1.component';
 import { Lex2Component } from './pages/lex2/lex2.component';
 import { Lex4Component } from './pages/grupo4al10/lex4/lex4.component';
 import { Lex10Component } from './pages/grupo4al10/lex10/lex10.component';
-import { Lex1313Component } from './pages/lex1313/lex1313.component';
+import { Lex1313Component } from './pages/lex1313/components/section-home/lex1313.component';
 
 
 

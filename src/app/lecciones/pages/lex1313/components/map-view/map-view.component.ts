@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Lex1313Service as mapService } from 'src/app/services/services-index';
+import { Lex1313Service } from '../../../../../services/lex1313.service';
 
 
 @Component({
@@ -10,11 +10,10 @@ import { Lex1313Service as mapService } from 'src/app/services/services-index';
 })
 export class MapViewComponent implements OnInit {
 
-  constructor( private mapService: mapService ) { }
+  constructor( private lex1313Service: Lex1313Service ) { }
 
   ngOnInit(): void {
-    console.log( this.mapService.userLocation );
-    
+    console.log( this.lex1313Service.userLocation );
   }
 
 }

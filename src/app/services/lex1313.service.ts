@@ -31,13 +31,10 @@ export class Lex1313Service {
                 ( err ) => {
                     console.log('error en getUserLocation');
                     alert('error en getUserLocation');
-                    throw new Error('error en getUserLocation');
-                    reject();
+                    reject( err );
                 }
             )
         });
     }
-    
-    
     
 }
