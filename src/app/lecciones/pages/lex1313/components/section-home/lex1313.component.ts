@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Lex1313Service } from 'src/app/services/lex1313.service';
+import { Lex1313Service as MapService } from 'src/app/services/services-index';
 
 
 @Component({
@@ -10,10 +10,10 @@ import { Lex1313Service } from 'src/app/services/lex1313.service';
 })
 export class Lex1313Component {
         
-    constructor( private lex1313Service: Lex1313Service ) {}
+    constructor( private mapService: MapService ) {}
 
-    get isUserLocationReady() {
-        return this.lex1313Service.isUserLocationReady;
+    get isUserLocationReady(): boolean{
+        return this.mapService.isUserLocationReady;
     }
     
 }

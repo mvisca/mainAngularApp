@@ -1,9 +1,8 @@
-<p>lex1313 works!</p>
-<pre>{{ isUserLocationReady }}</pre>
-
 <app-loading *ngIf="!isUserLocationReady; else locationReady">
 </app-loading>
 
 <ng-template  #locationReady>
     <app-map-view></app-map-view>
 </ng-template>
+
+<pre>{{ isUserLocationReady }}</pre>

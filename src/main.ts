@@ -1,18 +1,24 @@
-import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
+// import { config } from 'dotenv';
+
 import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
+
+// From dotenv
+// config();
+// if (process.env['NODE_ENV'] === 'production' ) {
+//     enableProdMode();
+// }
+// if (process.env['MAPBOX_KEY']) {
+//   mapboxgl.accessToken = process.env['MAPBOX_KEY'];
+// } else {
+//   console.error("No MAPBOX_TOKEN found in environment variables, please check your .env file.");
+// }
 
 
 if ( !navigator.geolocation ) {
     alert('Navegador sin geolocalización');
     throw new Error('No geolocation available in browser.');
-}
-
-
-if (environment.production) {
-  enableProdMode();
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)
