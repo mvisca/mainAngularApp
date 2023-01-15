@@ -29,12 +29,15 @@ import { environment } from 'src/environments/environment';
         height: 100%;
         width: 100%;
     }
+    
     `]
 })
 export class MapViewComponent implements AfterViewInit {
     
     @ViewChild('mapDiv')
     mapDivElement!: ElementRef
+    
+    userLocation!: [number, number];
     
     constructor( private mapService: MapService ) { }
     
@@ -54,8 +57,46 @@ export class MapViewComponent implements AfterViewInit {
                 // TO-DO Probar con nombre del elemento
                 center: this.mapService.userLocation,
                 zoom: 12
+            });
+            
+            map.addControl(new mapbox.FullscreenControl());
+            
+            
+            const marker = new mapbox.Marker({
+                draggable: true                    
             })
+                .setLngLat( this.mapService.userLocation )
+                .addTo(map); 
+            
+            
+            const popup = new mapbox.Popup({
+                closeButton: false,
+                closeOnClick: true,
+                closeOnMove: true,
+                offset: 50,
+                anchor: 'bottom',
+                className: 'popup-class',
+            })
+                .setLngLat( this.mapService.userLocation )
+                .setHTML(`
+                    <div class=container
+                         style="background-color: pink">
+                        <h1>
+                            Hello world!
+                        </h1>
+                    </div>
+                    
+                `)
+                
+                .addTo(map);
+                            
+            popup.on('close', () => {
+                console.log('pop close');
+            })
+            
         }
+        
+        
     }
 
     

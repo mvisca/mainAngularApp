@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+    .popup-class {
+        color: purple;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 20px;
+        text-align: right;
+    }
+    
+    .popup-class h1 {
+        font-size: 18px;
+    }
