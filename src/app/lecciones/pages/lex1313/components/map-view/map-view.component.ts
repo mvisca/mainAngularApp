@@ -50,7 +50,7 @@ export class MapViewComponent implements AfterViewInit {
             const map = new mapbox.Map({
                 // container: this.mapDivElement.nativeElement,
                 container: 'map', // mediante un <div id='map'>
-                style: 'mapbox://styles/mapbox/streets-v11', // style URL
+                style: 'mapbox://styles/martinvisca/ckv58dxc53out15qqdg8khc8g', // style URL
                 // TO-DO Probar con nombre del elemento
                 center: this.mapService.userLocation,
                 zoom: 12
