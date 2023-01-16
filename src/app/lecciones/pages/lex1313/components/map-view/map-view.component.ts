@@ -1,11 +1,11 @@
-import { AfterViewInit, Component, destroyPlatform, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 import mapbox from 'mapbox-gl';
 
-import { Lex1313Service } from 'src/app/services/services-index';
 import { environment } from 'src/environments/environment';
+import { Lex1313Service } from 'src/app/services/services-index';
 
-
+// RrlG4GMC4C1Vdj>
 @Component({
     selector: 'app-map-view',
     templateUrl: './map-view.component.html',
@@ -82,7 +82,8 @@ export class MapViewComponent implements AfterViewInit {
             })
                 .setLngLat( ul )
                 .setPopup(popup)                
-                .addTo(map); 
+                .addTo(map)
+                .togglePopup(); 
                                          
             popup.on('close', () => {
                 console.log('pop close');
