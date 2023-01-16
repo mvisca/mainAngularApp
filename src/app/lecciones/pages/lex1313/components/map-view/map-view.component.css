@@ -1,0 +1,25 @@
+body, html {
+    height: 100%;
+    width: 100%;    
+} 
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.map-container {
+    background-color: pink;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.map-overlay {
+    z-index: 99999;
+    position: relative;
+    top: 10px;
+    left: 10px;   
+}

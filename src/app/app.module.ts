@@ -8,7 +8,7 @@ import mapbox from 'mapbox-gl';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

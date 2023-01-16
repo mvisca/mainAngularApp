@@ -1,11 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
-    .popup-class {
-        color: purple;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        padding: 20px;
-        text-align: right;
-    }
-    
-    .popup-class h1 {
-        font-size: 18px;
-    }
+.popup-class div h1 {
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: darkslateblue;
+}
+
+.popup-class div h6 {
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: darkslateblue;
+}

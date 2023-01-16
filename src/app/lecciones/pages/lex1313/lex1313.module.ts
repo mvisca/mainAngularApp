@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { Lex1313Component } from './components/section-home/lex1313.component';
+import { Lex1313Component } from './components/lex1313/lex1313.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { MapViewComponent } from './components/map-view/map-view.component';
+import { LogoComponent } from './components/logo/logo.component';
+import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
 
 
 // TO-DO:agregar los compoenentes 
@@ -11,7 +13,9 @@ import { MapViewComponent } from './components/map-view/map-view.component';
   declarations: [ 
     Lex1313Component,
     LoadingComponent,
-    MapViewComponent
+    MapViewComponent,
+    LogoComponent,
+    FloatingButtonComponent
   ],
   imports: [
     CommonModule,
