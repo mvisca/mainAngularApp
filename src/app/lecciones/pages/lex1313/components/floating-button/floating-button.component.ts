@@ -17,19 +17,13 @@ export class FloatingButtonComponent implements OnInit {
         
         ngOnInit(): void {  
         }
-        
-        flyTo() {
-            console.log('flyTo my location');
-            const map = this.mapService.commonMap as Map;
-            const ul = this.lex1313Service.userLocation as [number, number];
-            
-            map?.flyTo({
-                center: ul,
-                zoom: 12,
-                duration: 2000,
-                bearing: 340,
-                pitch: 65
-            })
-                
-        }
+    
+    get coords() {
+        return this.lex1313Service.userLocation;    
+    }
+    
+    flyTo() {
+        this.mapService.flyTo( this.coords as [number,number]);
+    }
+    
     }
