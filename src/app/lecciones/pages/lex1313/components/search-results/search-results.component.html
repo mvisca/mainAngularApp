@@ -1,0 +1,16 @@
+<div *ngIf="isLoadingPlaces; else showPlaces" class="alert alert-primary m-0 mt-2 text-center">
+    <h6>Cargando...</h6>
+    <span>Espera por favor</span>
+</div>
+
+<ng-template #showPlaces>
+<ul class="list-group m-0 mt-2">
+    <li *ngFor="let place of places" class="list-group-item list-group-item-action" style="cursor:pointer;">
+        <h6>{{ place.text }}</h6>
+        <p class="m-0 mt-2">{{place.place_name}}</p>
+        <button class="btn btn-sm btn-primary m-0 mt-2" (click)="flyTo(place)">Go to location</button>
+    </li>
+</ul>
+</ng-template>
+
+<div class="m-0 mt-2"><app-floating-button></app-floating-button></div>

@@ -6,6 +6,8 @@ import { LoadingComponent } from './components/loading/loading.component';
 import { MapViewComponent } from './components/map-view/map-view.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
 
 
 // TO-DO:agregar los compoenentes 
@@ -15,7 +17,9 @@ import { FloatingButtonComponent } from './components/floating-button/floating-b
     LoadingComponent,
     MapViewComponent,
     LogoComponent,
-    FloatingButtonComponent
+    FloatingButtonComponent,
+    SearchBarComponent,
+    SearchResultsComponent
   ],
   imports: [
     CommonModule,

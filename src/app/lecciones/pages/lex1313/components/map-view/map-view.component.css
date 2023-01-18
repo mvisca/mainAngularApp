@@ -18,8 +18,13 @@ body, html {
 }
 
 .map-overlay {
-    z-index: 99999;
     position: relative;
     top: 10px;
     left: 10px;   
+}
+
+.logo {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }

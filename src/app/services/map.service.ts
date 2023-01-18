@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LngLatLike, Map } from 'mapbox-gl';
+import { Map } from 'mapbox-gl';
 
 @Injectable({
   providedIn: 'root'
