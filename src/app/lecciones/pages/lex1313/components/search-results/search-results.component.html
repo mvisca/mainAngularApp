@@ -5,10 +5,10 @@
 
 <ng-template #showPlaces>
 <ul class="list-group m-0 mt-2">
-    <li *ngFor="let place of places" class="list-group-item list-group-item-action" style="cursor:pointer;">
+    <li *ngFor="let place of places" [class.active]="place.id===selectedId" class="list-group-item list-group-item-action" style="cursor:pointer;">
         <h6>{{ place.text }}</h6>
         <p class="m-0 mt-2">{{place.place_name}}</p>
-        <button class="btn btn-sm btn-primary m-0 mt-2" (click)="flyTo(place)">Go to location</button>
+        <button *ngIf="!(place.id===selectedId)" class="btn btn-sm btn-primary m-0 mt-2" (click)="flyTo(place)">Go to location</button>
     </li>
 </ul>
 </ng-template>

@@ -13,7 +13,7 @@ export interface Feature {
     properties: Properties;
     text:       string;
     place_name: string;
-    center:     number[];
+    center:     [number, number];
     geometry:   Geometry;
     context:    Context[];
 }
